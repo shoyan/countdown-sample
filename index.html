@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.countdown-2.0.4/jquery.countdown.js"></script>
+<style>
+  #getting-started {
+    width: 400px;
+    background-color: #00b5ee;
+    color: #FFF;
+    font-size: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div id="getting-started"></div>
+<script type="text/javascript">
+$('#getting-started').countdown('2014/07/11 13:00:00', function(event) {
+    $(this).html(event.strftime('キャンペーン終了まで%H時間%M分%S秒'));
+})
+.on('update.countdown', function() {})
+.on('finish.countdown', function() {
+   alert("終了しました");
+});
+</script>
+</body>
+</html>
